@@ -21,7 +21,7 @@ d3.csv("ebird.csv").then(function (data) {
         
         // This code will filter the birds looking at the actors column. It will store the values when there is a match from the text sequence the user entered and the text from our actors column from the CSV data.
         var filteredbirds = 
-        birds.filter(birds => birds.PRIMARY_COM_NAME.includes(inputValue));
+        birds.filter(birds => birds.PRIMARY_COM_NAME.toLowerCase().includes(inputValue.toLowerCase()));
         
         // This was the easiest approach I found to sort the results by a different column in descending order. I had to include a new script in my head to use the _.sortBy 
         //This is the script:  
@@ -31,12 +31,13 @@ d3.csv("ebird.csv").then(function (data) {
 
         // Once I had all the values in my output variable, all I needed was to loop through them and add them to the table one by one. This was done using d3, where I inserted the value for each one of the columns I wanted using the necessary html to fit each table row.
         for (var i = 0; i < filteredbirds.length; i++) {
-        d3.select('tbody').insert('tr').html(
-        '<td>' + [i+1] + '</td>' +
-        '<td>' + (output[i]['TAXON_ORDER'])+'</a>'+'</td>' + 
-        '<td>' + (output[i]['CATEGORY'])+'</td>' +
-        '<td>' + (output[i]['SPECIES_CODE'])+'</td>' +
-        '<td>' + (output[i]['PRIMARY_COM_NAME'])+'</td' +
-        '<td>' + (output[i]['SCI_NAME'])+'</td' ) }
+            d3.select('tbody').insert('tr').html(
+            '<td>' + (output[i]['TAXON_ORDER'])+'</a>'+'</td>' + 
+            '<td>' + (output[i]['CATEGORY'])+'</td>' +
+            '<td>' + (output[i]['SPECIES_CODE'])+'</td>' +
+            '<td>' + (output[i]['PRIMARY_COM_NAME'])+'</td> ' +
+            '<td>' + (output[i]['SCI_NAME'])+'</td>'
+            )
+         }
     };
 });
