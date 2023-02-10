@@ -1,0 +1,68 @@
+body {
+    background-color: #f8f6f7;
+}
+
+#form {
+    display: flex;
+    
+}
+
+#user-input {
+    border-radius: 30px;
+}
+
+#button { 
+    width: 150px;
+    margin-left: 15px;
+    border-radius: 30px;
+}
+
+.results {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: block;
+    padding: 30px;
+    margin: 15px;
+    width: 350px;
+    height: 200px;
+    border-radius: 30px;
+    stroke: gray;
+}
+
+.common_name {
+    font-size: 18px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 15px 5px 15px;
+    margin: 5px;
+    border-radius: 30px;
+    font-size: 10px;
+}
+
+#order {
+    background-color: #92ccd4;
+    color: #599199;
+}
+
+#species {
+    background-color: #efabaa;
+    color: #b47878;
+}
+
+#family {
+    background-color: #f4e9bf;
+    color: #beb28c;
+}
