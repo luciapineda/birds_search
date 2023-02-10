@@ -36,6 +36,8 @@ body {
 
 .common_name {
     font-size: 18px;
+    /**/
+    display: inline-block;
 }
 
 .info {
@@ -65,4 +67,18 @@ body {
 #family {
     background-color: #f4e9bf;
     color: #beb28c;
+}
+
+#sci_name{
+    background-color: #BCB4E0;
+    color: #6E6690;
+}
+
+.pin{
+    float: right;
+    color: #C7C6C6;
+}
+
+.pin:hover{
+    color: #E5BF37;
 }
