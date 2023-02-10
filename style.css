@@ -4,7 +4,7 @@ body {
 
 #form {
     display: flex;
-    
+    padding: 30px 0px 30px 0px;
 }
 
 #user-input {
@@ -15,6 +15,13 @@ body {
     width: 150px;
     margin-left: 15px;
     border-radius: 30px;
+}
+
+.saved {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .results {
@@ -80,5 +87,5 @@ body {
 }
 
 .pin:hover{
-    color: #E5BF37;
+    color: #D16D85;
 }
